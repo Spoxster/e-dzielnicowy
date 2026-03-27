@@ -19,6 +19,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje zgłoszenia</title>
+    <style>
+        body
+        {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <h2>Moje zgłoszenia</h2>
@@ -27,8 +44,8 @@
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<div>";
-                echo "<h3>" . $row["title"] . "</h3>";
-                echo "<p>" . $row["description"] . "</p>";
+                echo "<h3>Tytuł: " . $row["title"] . "</h3>";
+                echo "<p>Opis: " . $row["description"] . "</p>";
                 echo "<p>Kategoria: " . $row["category"] . "</p>";
                 echo "<p>Lokacja: " . $row["location"] . "</p>";
                 echo "<p>Czas wydarzenia: " . $row["event_date"] . "</p>";
