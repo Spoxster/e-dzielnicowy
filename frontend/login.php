@@ -37,12 +37,12 @@ include "config.php";
                     $error = "Nieprawidłowe hasło";
                 }
             } else {
-                $error = "Użytkownik nie istnieje";
+                $error = "Użytkownik nie istnieje";aaa
             }
         }
 
         if (isset($error)) {
-            echo "<p>$error</p>";aaa
+            echo "<p>$error</p>";
         }
         ?>
     </div>
