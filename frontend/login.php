@@ -37,7 +37,7 @@ include "config.php";
                     $error = "Nieprawidłowe hasło";
                 }
             } else {
-                $error = "Użytkownik nie istnieje";aaa
+                $error = "Użytkownik nie istnieje";
             }
         }
 
