@@ -42,7 +42,7 @@ include "config.php";
         }
 
         if (isset($error)) {
-            echo "<p>$error</p>";
+            echo "<p>$error</p>";aaa
         }
         ?>
     </div>
