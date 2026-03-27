@@ -79,6 +79,8 @@ session_start();
     <a href="index.php">Strona główna</a>
     <?php if(isset($_SESSION['user_id'])): ?>
         <a href="my_profile.php">Mój profil</a>
+        <a href="my_reports.php">Moje zgłoszenia</a>
+        <a href="add_report.php">Zgłoś zdarzenie</a>
         <a href="logout.php">Wyloguj</a>
     <?php else: ?>
         <a href="login.php">Logowanie</a>

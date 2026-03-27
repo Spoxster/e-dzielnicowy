@@ -23,11 +23,22 @@
 <body>
     <h2>Moje zgłoszenia</h2>
 
-    (if $result-> num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "<div>";
-            echo "<h3>"
+    <?php
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<div>";
+                echo "<h3>" . $row["title"] . "</h3>";
+                echo "<p>" . $row["description"] . "</p>";
+                echo "<p>Kategoria: " . $row["category"] . "</p>";
+                echo "<p>Lokacja: " . $row["location"] . "</p>";
+                echo "<p>Czas wydarzenia: " . $row["event_date"] . "</p>";
+                echo "<p>Czas zgłoszenia: " . $row["created_at"] . "</p>";
+                echo "</div><hr>";
+            }
         }
-    }
+        else {
+            echo"<p>Nie masz jeszcze żadnych zgłoszeń.</p>";
+        } 
+    ?>
 </body>
 </html>
